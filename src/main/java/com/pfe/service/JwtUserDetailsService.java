@@ -61,5 +61,23 @@ public class JwtUserDetailsService implements UserDetailsService {
 		return retBuf;
 	}
 
+	public DAOUser updateUser(UserDTO user) {
+		Optional<DAOUser> userA = userDao.findById(user.Id);
+		
+		if(userA.isPresent()) 
+        {
+			DAOUser newEntity = userA.get();
+            newEntity.setUsername(user.getUsername());
+            newEntity.setPassword(user.getPassword());
+            newEntity.setRole(user.getRole());
+            newEntity.setEmail(user.getEmail());
+ 
+            newEntity = userDao.save(newEntity);
+             
+            return newEntity;
+        }
+		return null;
+	}
+
 
 }

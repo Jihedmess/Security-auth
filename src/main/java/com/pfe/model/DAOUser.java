@@ -10,6 +10,7 @@ public class DAOUser {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
 	private Integer id;
 	@Column
 	private String username;
@@ -25,6 +26,14 @@ public class DAOUser {
 	
 	
 	
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 	public String getEmail() {
 		return email;
