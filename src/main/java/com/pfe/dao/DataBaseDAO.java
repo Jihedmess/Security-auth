@@ -7,12 +7,7 @@ import com.pfe.model.DAODataBase;
 import com.pfe.model.DAOUser;
 
 @Repository
-public interface UserDao extends CrudRepository<DAOUser, Integer> {
+public interface DataBaseDAO extends CrudRepository<DAODataBase, Integer> {
 	
-	DAOUser findByUsername(String username);
 
-	
-	
-	
-	
 }
