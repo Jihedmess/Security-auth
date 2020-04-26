@@ -52,7 +52,15 @@ public class JwtUserDetailsService implements UserDetailsService {
 		// TODO Auto-generated method stub
 		return userDao.findById(id);
 	}
+	public DAOUser getUserByEmail(String email) {
+		// TODO Auto-generated method stub
+		return userDao.findByEmail(email);
+	}
 
+	public DAOUser getUserByUserName(String usesrname) {
+		// TODO Auto-generated method stub
+		return userDao.findByUsername(usesrname);
+	}
 	public StringBuffer delteUser(Integer id) {
 		// TODO Auto-generated method stub
 		userDao.deleteById(id);

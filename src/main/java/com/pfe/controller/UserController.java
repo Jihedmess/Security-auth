@@ -35,6 +35,16 @@ public class UserController {
 		return ResponseEntity.ok(userDetailsService.getUserById(id));
 	}
 	
+	@RequestMapping(value = "/User", method = RequestMethod.GET)
+	public ResponseEntity<?> getUserByEmail(@RequestParam String email) throws Exception {
+		return ResponseEntity.ok(userDetailsService.getUserByEmail(email));
+	}
+	
+	@RequestMapping(value = "/User", method = RequestMethod.GET)
+	public ResponseEntity<?> getUserByUsername(@RequestParam String email) throws Exception {
+		return ResponseEntity.ok(userDetailsService.getUserByUserName(email));
+	}
+	
 	@RequestMapping(value = "/UserDelete", method = RequestMethod.DELETE)
 	public ResponseEntity<?> deleteUser(@RequestParam Integer id) throws Exception {
 		return ResponseEntity.ok(userDetailsService.delteUser(id));
