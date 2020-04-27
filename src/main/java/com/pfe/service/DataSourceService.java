@@ -23,7 +23,7 @@ public class DataSourceService {
 		newDataBase.setUrl(database.getUrl());
 		newDataBase.setUser(database.getUser());
 		newDataBase.setPassword(database.getPassword());
-		
+		newDataBase.setPlatform(database.getPlatform());
 		return dataBaseDAO.save(newDataBase);
 	}
 	
@@ -57,6 +57,7 @@ public DAODataBase updateUser(DataBaseDTO database) {
         newEntity.setUrl(database.getUrl());
         newEntity.setPassword(database.getPassword());
         newEntity.setUser(database.getUser());
+        newEntity.setPlatform(database.getPlatform());
         newEntity = dataBaseDAO.save(newEntity);
         return newEntity;
     }

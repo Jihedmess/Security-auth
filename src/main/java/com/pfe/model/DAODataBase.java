@@ -20,6 +20,15 @@ public class DAODataBase {
 	private String user;
 	@Column
 	private String password;
+	@Column
+	private String platform;
+	
+	public String getPlatform() {
+		return platform;
+	}
+	public void setPlatform(String platform) {
+		this.platform = platform;
+	}
 	public Integer getId() {
 		return id;
 	}

@@ -11,6 +11,17 @@ public class DataBaseDTO {
 	private String user;
 	
 	private String password;
+	
+	private String platform;
+	
+
+	public String getPlatform() {
+		return platform;
+	}
+
+	public void setPlatform(String platform) {
+		this.platform = platform;
+	}
 
 	public String getUrl() {
 		return url;

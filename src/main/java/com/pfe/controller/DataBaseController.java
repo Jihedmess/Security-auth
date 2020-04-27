@@ -28,24 +28,24 @@ public class DataBaseController {
 	}
 	
 	@CrossOrigin(origins = "*", allowedHeaders = "*")
-	@RequestMapping(value = "/DataBases", method = RequestMethod.GET)
+	@RequestMapping(value = "/dataBases", method = RequestMethod.GET)
 	public ResponseEntity<?> getUser() throws Exception {
 		return ResponseEntity.ok(dataSourceService.getAll());
 	}
 	
 	
-	@RequestMapping(value = "/DataBase", method = RequestMethod.GET)
+	@RequestMapping(value = "/dataBase", method = RequestMethod.GET)
 	public ResponseEntity<?> getUserById(@RequestParam Integer id) throws Exception {
 		return ResponseEntity.ok(dataSourceService.getUserById(id));
 	}
 	
 	
-	@RequestMapping(value = "/DataBaseDelete", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/dataBaseDelete", method = RequestMethod.DELETE)
 	public ResponseEntity<?> deleteUser(@RequestParam Integer id) throws Exception {
 		return ResponseEntity.ok(dataSourceService.delteUser(id));
 	}
 	
-	@RequestMapping(value = "/UpdateDataBase", method = RequestMethod.PUT)
+	@RequestMapping(value = "/updateDataBase", method = RequestMethod.PUT)
 	public ResponseEntity<?> UpdateUser(@RequestBody DataBaseDTO database) throws Exception {
 		return ResponseEntity.ok(dataSourceService.updateUser(database));
 	}
